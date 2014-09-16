@@ -20,12 +20,12 @@
 
     <config-file target="*-Info.plist" parent="ApiUser">
         <!-- replace with your SendGrid user/pwd -->
-        <string>EddyVerbruggen</string>
+        <string>username</string>
     </config-file>
 
     <config-file target="*-Info.plist" parent="ApiKey">
         <!-- replace with your SendGrid user/pwd -->
-        <string>xs4allall</string>
+        <string>password</string>
     </config-file>
 
   </platform>
@@ -36,9 +36,9 @@
 
         <config-file target="res/values/sendgrid.xml" parent="/*">
             <!-- replace with your SendGrid user/pwd -->
-            <string name="api_user">EddyVerbruggen</string>
+            <string name="api_user">username</string>
             <!-- replace with your SendGrid user/pwd -->
-            <string name="api_key">xs4allall</string>
+            <string name="api_key">password</string>
         </config-file>
 
 		<config-file target="res/xml/config.xml" parent="/*">

@@ -7,7 +7,7 @@
         sendPlain: function () {
             if (!this.checkSimulator()) {
                 var email = {
-                    "to"      : "eddyverbruggen@gmail.com",
+                    "to"      : "your-email-address@your-host.com",
                     "from"    : "sendgrid-plugin@telerik.com",
                     "subject" : "Mail from the SendGrid plugin (plain text)",
                     "text"    : "This message is sent as plain text, so you <strong>should</strong> see some nasty HTML tags here :)"
@@ -23,7 +23,7 @@
         sendHTML: function () {
             if (!this.checkSimulator()) {
                 var email = {
-                    "to"      : "eddyverbruggen@gmail.com",
+                    "to"      : "your-email-address@your-host.com",
                     "from"    : "sendgrid-plugin@telerik.com",
                     "subject" : "Mail from the SendGrid plugin (HTML)",
                     "text"    : "This is the backup text for non-HTML mailclients",
