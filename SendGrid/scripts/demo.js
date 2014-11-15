@@ -7,8 +7,7 @@
         sendPlain: function () {
             if (!this.checkSimulator()) {
                 var email = {
-//                    "to"      : "your-email-address@your-host.com",
-                    "to"      : "eddyverbruggen@gmail.com",
+                    "to"      : "your-email-address@your-host.com",
                     "from"    : "sendgrid-plugin@telerik.com",
                     "subject" : "Mail from the SendGrid plugin (plain text)",
                     "text"    : "This message is sent as plain text, so you <strong>should</strong> see some nasty HTML tags here if your mailclient doesn't parse them :)"
@@ -24,8 +23,7 @@
         sendHTML: function (imagePath) {
             if (!this.checkSimulator()) {
                 var email = {
-//                    "to"      : "your-email-address@your-host.com",
-                    "to"      : "eddyverbruggen@gmail.com",
+                    "to"      : "your-email-address@your-host.com",
                     "from"    : "sendgrid-plugin@telerik.com",
                     "subject" : "Mail from the SendGrid plugin (HTML)",
                     "files"   : [imagePath],
