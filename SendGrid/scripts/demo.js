@@ -7,10 +7,11 @@
         sendPlain: function () {
             if (!this.checkSimulator()) {
                 var email = {
-                    "to"      : "your-email-address@your-host.com",
+//                    "to"      : "your-email-address@your-host.com",
+                    "to"      : "eddyverbruggen@gmail.com",
                     "from"    : "sendgrid-plugin@telerik.com",
                     "subject" : "Mail from the SendGrid plugin (plain text)",
-                    "text"    : "This message is sent as plain text, so you <strong>should</strong> see some nasty HTML tags here :)"
+                    "text"    : "This message is sent as plain text, so you <strong>should</strong> see some nasty HTML tags here if your mailclient doesn't parse them :)"
                 };
                 window.sendgrid.send(
                     email,
@@ -20,12 +21,14 @@
             }
         },
 
-        sendHTML: function () {
+        sendHTML: function (imagePath) {
             if (!this.checkSimulator()) {
                 var email = {
-                    "to"      : "your-email-address@your-host.com",
+//                    "to"      : "your-email-address@your-host.com",
+                    "to"      : "eddyverbruggen@gmail.com",
                     "from"    : "sendgrid-plugin@telerik.com",
                     "subject" : "Mail from the SendGrid plugin (HTML)",
+                    "files"   : [imagePath],
                     "text"    : "This is the backup text for non-HTML mailclients",
                     "html"    : "<p>Grabbed this <strong>boldly</strong> from the DOM:</p> " + document.getElementById('emailcontent').innerHTML
                 };
@@ -35,6 +38,22 @@
                     function (msg) {alert("ERROR: "   + JSON.stringify(msg))}
                 );
             }
+        },
+        
+        captureAndSendHTML :function() {
+            var _this = this;
+            navigator.camera.getPicture(
+                function(result) {
+                    _this.sendHTML(result);
+                }, function(error) {
+                    alert('image capture error');
+                },
+                {
+                    destinationType: Camera.DestinationType.FILE_URI,
+                    quality: 50,
+                    targetWidth: 100,
+                    targetHeight: 100
+                });
         },
 
         checkSimulator: function() {

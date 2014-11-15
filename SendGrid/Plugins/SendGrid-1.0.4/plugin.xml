@@ -61,11 +61,13 @@
     <framework src="MobileCoreServices.framework" />
 
     <config-file target="*-Info.plist" parent="ApiUser">
-        <string>EddyVerbruggen</string>
+        <!-- replace with your SendGrid user/pwd -->
+        <string>username</string>
     </config-file>
 
     <config-file target="*-Info.plist" parent="ApiKey">
-        <string>xs4allall</string>
+        <!-- replace with your SendGrid user/pwd -->
+        <string>password</string>
     </config-file>
 
   </platform>
@@ -75,8 +77,10 @@
 		<source-file src="src/android/res/values/sendgrid.xml" target-dir="res/values" />
 
         <config-file target="res/values/sendgrid.xml" parent="/*">
-            <string name="api_user">EddyVerbruggen</string>
-            <string name="api_key">xs4allall</string>
+            <!-- replace with your SendGrid user/pwd -->
+            <string name="api_user">username</string>
+            <!-- replace with your SendGrid user/pwd -->
+            <string name="api_key">password</string>
         </config-file>
 
 		<config-file target="res/xml/config.xml" parent="/*">
