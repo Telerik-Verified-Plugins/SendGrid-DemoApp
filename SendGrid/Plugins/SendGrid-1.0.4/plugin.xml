@@ -3,6 +3,9 @@
 
   <name>SendGrid</name>
 
+  <preference name="API_USER" />
+  <preference name="API_KEY" />
+
   <js-module name="sendgrid" src="www/SendGrid.js">
     <clobbers target="sendgrid" />
   </js-module>
@@ -61,13 +64,11 @@
     <framework src="MobileCoreServices.framework" />
 
     <config-file target="*-Info.plist" parent="ApiUser">
-        <!-- replace with your SendGrid user/pwd -->
-        <string>username</string>
+        <string>$API_USER</string>
     </config-file>
 
     <config-file target="*-Info.plist" parent="ApiKey">
-        <!-- replace with your SendGrid user/pwd -->
-        <string>password</string>
+        <string>$API_KEY</string>
     </config-file>
 
   </platform>
@@ -77,10 +78,8 @@
 		<source-file src="src/android/res/values/sendgrid.xml" target-dir="res/values" />
 
         <config-file target="res/values/sendgrid.xml" parent="/*">
-            <!-- replace with your SendGrid user/pwd -->
-            <string name="api_user">username</string>
-            <!-- replace with your SendGrid user/pwd -->
-            <string name="api_key">password</string>
+            <string name="api_user">$API_USER</string>
+            <string name="api_key">$API_KEY</string>
         </config-file>
 
 		<config-file target="res/xml/config.xml" parent="/*">
