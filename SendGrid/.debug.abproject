@@ -4,14 +4,5 @@
       "API_KEY": "1",
       "API_USER": "2"
     }
-  },
-  "CorePlugins": [
-    "org.apache.cordova.camera",
-    "org.apache.cordova.console",
-    "org.apache.cordova.device",
-    "org.apache.cordova.dialogs",
-    "org.apache.cordova.splashscreen",
-    "org.apache.cordova.statusbar",
-    "org.apache.cordova.vibration"
-  ]
+  }
 }

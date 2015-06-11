@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="com.telerik.sendgrid" version="1.0.5" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="com.telerik.sendgrid" version="1.0.6" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
 
   <name>SendGrid</name>
 
@@ -9,6 +9,12 @@
   <js-module name="sendgrid" src="www/SendGrid.js">
     <clobbers target="sendgrid" />
   </js-module>
+
+  <engines>
+    <engine name="cordova" version=">=3.0.0"/>
+    <!-- needed for gradleReference support -->
+    <engine name="cordova-plugman" version=">=4.2.0"/>
+  </engines>
 
   <platform name="ios">
 
@@ -73,6 +79,7 @@
 
         <source-file src="src/android/SendGridPlugin.java"  target-dir="src/com/telerik/sendgrid" />
 
-	</platform>
+        <framework src="src/android/sendgrid.gradle" custom="true" type="gradleReference" />
+    </platform>
 
 </plugin>
