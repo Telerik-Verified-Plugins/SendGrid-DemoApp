@@ -6,7 +6,7 @@
   "DisplayName": "SendGrid plugin demo",
   "Author": "Telerik",
   "Description": "SendGrid plugin demo",
-  "BundleVersion": "1.1.0",
+  "BundleVersion": "1.1.1",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [
     "1",
@@ -22,9 +22,10 @@
   "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
   "FrameworkVersion": "4.0.0",
   "CorePlugins": [
+    "com.telerik.sendgrid@1.0.7",
     "cordova-plugin-camera",
     "cordova-plugin-console",
-    "cordova-plugin-crosswalk-webview@1.2.0",
+    "cordova-plugin-crosswalk-webview@1.5.0",
     "cordova-plugin-device",
     "cordova-plugin-dialogs",
     "cordova-plugin-splashscreen",
