@@ -1,8 +1,8 @@
 {
   "CordovaPluginVariables": {
     "com.telerik.sendgrid": {
-      "API_KEY": "xs4allall",
-      "API_USER": "EddyVerbruggen"
+      "API_KEY": "your-password",
+      "API_USER": "your-username"
     }
   }
 }
